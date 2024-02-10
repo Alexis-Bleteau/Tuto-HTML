@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- La langue du site -->
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Le titre de la page  -->
+    <title>Formulaire en HTML</title>
+    <!-- Icone de l'onglet -->
+    <link rel="shortcut icon" href="html-logo.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+</head>
+
+
+
+<body>
+    
+<!-- Formulaires en HTML -->
+<section>
+    <h2>Formulaire</h2>
+    <form action="/action.php" method="post">
+        <label for="name">Nom</label>
+        <input id="name" type="text" placeholder="Entrez votre nom" /><br />
+
+        <label for="number">Entrez votre age</label>
+        <input type="number" id="number-age" value="15" oninput="document.getElementById('range-age').value=this.value">
+        <input type="range" id="range-age" min="0" max="100"
+            oninput="document.getElementById('number-age').value=this.value"><br/>
+
+        <!-- Input select -->
+        <label for="gender">Genre</label>
+        <select id="gender">
+            <option selected="selected" value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+        </select><br/>
+
+        <!-- Input radio -->
+        <div>
+            <input type="radio" name="type" id="human" checked/>
+            <label for="human">Humain</label>
+
+            <input type="radio" name="type" id="dog"/>
+            <label for="dog">Chien</label>
+
+            <input type="radio" name="type" id="cat"/>
+            <label for="cat">Chat</label>
+        </div>
+
+        <textarea cols="20" rows="5" placeholder="Votre message..."></textarea><br/>
+
+        <!-- Input Checkbox -->
+        <label><input type="checkbox" />Accepter les CGV</label> <br/>
+        <input type="submit" value="Submit" />
+    </form>
+</section>
+<br/>
+</body>
